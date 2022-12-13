@@ -1,7 +1,10 @@
-package cmd
+package main
 
-import "fmt"
+import (
+		"github.com/enocPierre/api-users/configs"
+)
 
 func main() {
-	fmt.Println("Test")
+	config, _:= configs.LoadConfig(".")
+	println(config.DBDriver)
 }
